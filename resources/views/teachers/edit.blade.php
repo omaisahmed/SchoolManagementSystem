@@ -47,7 +47,7 @@
         </ul>
     </div>
 @endif
-                   <form action="{{ route('teachers.update',$teacher->id) }}" method="POST">
+                   <form action="{{ route('teachers.update',$teacher->id) }}" method="POST" enctype="multipart/form-data">
                    @csrf
                    {{ method_field("PUT") }}
                         <div class="form-group mb-0">
@@ -81,6 +81,22 @@
                             </div>
                         </div>
 
+                        <div class="form-group mb-0">
+                            <label class="my-2 py-1">Designation</label>
+                            <input type="text" name="designation" class="form-control" value="{{ $teacher->designation }}" required placeholder="Designation"/>
+                        </div>
+
+                        <div class="form-group mb-0">
+                            <label class="my-2 py-1">Department</label>
+                            <div>
+                            <select name="department" class="select2 form-control mb-3 custom-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                @foreach($TeacherDept as $TeacherDepts)
+                                <option value="{{ $TeacherDepts->name }}">{{ $TeacherDepts->name }}</option>
+                                @endforeach
+                            </select>
+                            </div>
+                        </div>
+
                        
 
                        <div class="form-group mb-0">
@@ -111,6 +127,11 @@
                         <div class="form-group mb-0">
                             <label class="my-2 py-1">Address</label>
                             <textarea name="address" value="{{ $teacher->address }}" class="form-control mb-3" rows="4" required placeholder="Address"></textarea>
+                        </div>
+
+                        <div class="form-group mb-0">
+                            <label class="my-2 py-1">Upload Image</label>
+                            <input type="file" name="image" value="{{ $teacher->image }}" class="form-control" required />
                         </div>
                        
                        

@@ -44,6 +44,7 @@
                                                     <tr>
                                                     <th>No</th>
                                                     <th>Class</th>
+                                                    <th>Section</th>
                                                     <th>Actions</th>
                                                     </tr>
                                                 </thead>
@@ -52,7 +53,7 @@
                                                     <tr>
                                                         <td>{{ $class->id }}</td>
                                                         <td>{{ $class->class }}</td>
-                                                    
+                                                        <td>{{ $class->section }}</td>
                                                         <td><form action="{{ route('classes.destroy',$class->id) }}" method="POST">
                                                           <a class="btn btn-primary" href="{{ route('classes.edit',$class->id) }}">Edit</a>
                                                 @csrf

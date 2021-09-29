@@ -47,6 +47,7 @@
                                                     <tr>
                                                     <th class="Bold">No</th>
                                                     <th class="Bold">Class</th>
+                                                    <th class="Bold">Section</th>
                                                     <th class="Bold">Action</th>
                                                     </tr>
                                                 </thead>
@@ -54,7 +55,8 @@
                                                 @foreach ($classes as $class)
                                                     <tr>
                                                         <td>{{ ++$i }}</td>
-                                                        <td>{{ $class->class }}</td>  
+                                                        <td>{{ $class->class }}</td>
+                                                        <td>{{ $class->section }}</td>  
                                                         <td><form action="{{ route('classes.destroy',$class->id) }}" method="POST">
                                                           <a class="btn btn-primary" href="{{ route('classes.edit',$class->id) }}">Edit</a>
                                                 @csrf

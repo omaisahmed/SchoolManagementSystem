@@ -30,6 +30,11 @@ class Users extends Authenticatable
         'role',
     ];
 
+    // public function teacher()
+    // {
+    //     return $this->hasOne('App\Models\Teachers');
+    // }
+
     /**
      * The attributes that should be hidden for arrays.
      *

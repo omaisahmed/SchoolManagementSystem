@@ -50,10 +50,13 @@
                                                 <thead>
                                                     <tr>
                                                     <th class="Bold">No</th>
+                                                    <th class="Bold">Image</th>
                                                     <th class="Bold">Name</th>
                                                     <th class="Bold">Email</th>
                                                     <th class="Bold">Password</th>
                                                     <th class="Bold">Confirm Password</th>
+                                                    <th class="Bold">Designation</th>
+                                                    <th class="Bold">Department</th>
                                                     <th class="Bold">Phone</th>
                                                     <th class="Bold">Gender</th>
                                                     <th class="Bold">DOB</th>
@@ -62,29 +65,34 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                @foreach ($teachers as $teacher)
-                                                    <tr>
-                                                        <td>{{ ++$i }}</td>
-                                                        <td>{{ $teacher->name }}</td>
-                                                        <td>{{ $teacher->email}}</td>
-                                                        <td>{{ $teacher->password}}</td>
-                                                        <td>{{ $teacher->confirm_password }}</td>
-                                                        <td>{{ $teacher->phone }}</td>
-                                                        <td>{{ $teacher->gender }}</td>
-                                                        <td>{{ $teacher->dob }}</td>
-                                                        <td>{{ $teacher->address }}</td>
-                                                        <td><form action="{{ route('teachers.destroy',$teacher->id) }}" method="POST">
-                                                          <a class="btn btn-primary" href="{{ route('teachers.edit',$teacher->id) }}">Edit</a>
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">Delete</button>
-                                                </form>
-                                            </td>
-                                            </tr>
-                                            @endforeach
+                                                        @foreach ($teachers as $teacher)
+                                                      
+                                                            <tr>
+                                                            
+                                                                <td>{{ ++$i }}</td>
+                                                                <th><img src="/images/teachers/{{ $teacher->image }}" width="70" class="img-responsive rounded-circle" /></th>
+                                                                <td>{{ $teacher->name }}</td>
+                                                                <td>{{ $teacher->email}}</td>
+                                                                <td>{{ $teacher->password}}</td>
+                                                                <td>{{ $teacher->confirm_password }}</td>
+                                                                <td>{{ $teacher->designation }}</td>
+                                                                <td>{{ $teacher->department }}</td>
+                                                                <td>{{ $teacher->phone }}</td>
+                                                                <td>{{ $teacher->gender }}</td>
+                                                                <td>{{ $teacher->dob }}</td>
+                                                                <td>{{ $teacher->address }}</td>
+                                                                <td><form action="{{ route('teachers.destroy',$teacher->id) }}" method="POST">
+                                                                <a class="btn btn-primary" href="{{ route('teachers.edit',$teacher->id) }}">Edit</a>
+                                                                        @csrf
+                                                                        @method('DELETE')
+                                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                                        </form>
+                                                                </td>
+                                                            </tr>
+                                                        @endforeach
                                                    
-                                                </tbody>
-                                            </table>
+                                                    </tbody>
+                                                </table>
 
                                             {{ $teachers->links() }}
                                             

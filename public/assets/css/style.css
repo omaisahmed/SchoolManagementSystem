@@ -3697,3 +3697,8 @@ File: Responsive
 .Bold{
   font-weight: bold;
 }
+
+.card-body{
+  overflow-x: auto;
+    overflow-y: visible;
+}

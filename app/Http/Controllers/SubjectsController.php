@@ -69,7 +69,8 @@ class SubjectsController extends Controller
      */
     public function edit(Subjects $subject)
     {
-        return view('subjects.edit',compact('subject'));
+        $ClassSubject = Classes::all();
+        return view('subjects.edit', ['ClassSub' => $ClassSubject], compact('subject'));
     }
 
     /**

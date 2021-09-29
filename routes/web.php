@@ -5,6 +5,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\TeachersController;
 use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\SubjectsController;
+use App\Http\Controllers\DepartmentsController;
 use Illuminate\Http\RedirectResponse;
 
 /*
@@ -33,6 +34,7 @@ Route::resource('users',UsersController::class);
 Route::resource('teachers',TeachersController::class);
 Route::resource('classes',ClassesController::class);
 Route::resource('subjects',SubjectsController::class);
+Route::resource('department',DepartmentsController::class);
 // Route::get('/subjects', [SubjectsController::class, 'create']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use DB;
 use App\Models\Classes;
+use App\Models\Subjects;
 use Illuminate\Http\Request;
 
 class ClassesController extends Controller
@@ -42,6 +43,7 @@ class ClassesController extends Controller
     {
         $request->validate([
             'class'=> 'required',
+            'section'=> 'required',
             
         ]);
 
@@ -88,12 +90,14 @@ class ClassesController extends Controller
 
         $request->validate([
             'class'=> 'required',
+            'section'=> 'required',
             
         ]);
 
         Classes::where('id', $class->id)
         ->update([
             'class' => $request->input('class'),
+            'section' => $request->input('section'),
             
         ]);
         // Students::update($request->all());
@@ -106,8 +110,20 @@ class ClassesController extends Controller
      * @param  \App\Models\Classes  $students
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Classes $class)
+    public function destroy(Request $request, Classes $class, Subjects $subject)
     {
+
+        // Subjects::delete($request->all());
+
+        Subjects::where('id', $subject->id)
+        ->delete([
+            'class' => $request->input('class'),
+            'subject' => $request->input('subject'),
+        
+              
+        ]);
+
+
         $class->delete();
         return redirect()->route('classes.index')->with('success','Class Deleted Successfully!');
     }

@@ -56,6 +56,11 @@
                             <input type="text" name="class" value="{{ $class->class }}" class="form-control" required placeholder="Class"/>
                         </div>
 
+                        <div class="form-group mt-3">
+                            <label class="mb-2 pb-1">Section</label>
+                            <input type="text" name="section" value="{{ $class->section }}" class="form-control" required placeholder="Section"/>
+                        </div>
+
                     
                        
                         <div class="form-group mt-3">
