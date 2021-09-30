@@ -113,16 +113,7 @@ class ClassesController extends Controller
     public function destroy(Request $request, Classes $class, Subjects $subject)
     {
 
-        // Subjects::delete($request->all());
-
-        Subjects::where('id', $subject->id)
-        ->delete([
-            'class' => $request->input('class'),
-            'subject' => $request->input('subject'),
-        
-              
-        ]);
-
+          Subjects::destroy($subject->all());
 
         $class->delete();
         return redirect()->route('classes.index')->with('success','Class Deleted Successfully!');

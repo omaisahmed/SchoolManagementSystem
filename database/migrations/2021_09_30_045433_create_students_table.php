@@ -15,9 +15,17 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->bigIncrements("id");
+            $table->string("image");
             $table->string("name");
             $table->string("email");
-            $table->string("role");
+            $table->string("password");
+            $table->string("confirm_password");
+            $table->string("class");
+            $table->string("section");
+            $table->string("phone");
+            $table->string("gender");
+            $table->string("dob");
+            $table->string("address");
             $table->timestamps();
         });
     }

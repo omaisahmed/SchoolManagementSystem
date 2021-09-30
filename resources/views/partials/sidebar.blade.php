@@ -32,6 +32,10 @@
                             </li>
 
                             <li>
+                                <a href="/students" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> Students </span></a>
+                            </li>
+
+                            <li>
                                 <a href="/teachers" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> Teachers </span></a>
                             </li>
 
