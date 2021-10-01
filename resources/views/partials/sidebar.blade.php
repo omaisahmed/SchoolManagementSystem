@@ -51,6 +51,10 @@
                                 <a href="/department" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> Department </span></a>
                             </li>
 
+                            <li>
+                                <a href="/classroom" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> Class Room </span></a>
+                            </li>
+
                             <!-- Authentication -->
                             <li class="py-3" style="margin-left: 35px;">
                             <form method="POST" action="{{ route('logout') }}">
