@@ -36,6 +36,10 @@
                             </li>
 
                             <li>
+                                <a href="/students/create" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> Admission </span></a>
+                            </li>
+
+                            <li>
                                 <a href="/teachers" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> Teachers </span></a>
                             </li>
 
@@ -57,6 +61,10 @@
 
                             <li>
                                 <a href="/classroutine" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> Class Routine </span></a>
+                            </li>
+
+                            <li>
+                                <a href="/syllabus" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> Syllabus </span></a>
                             </li>
 
                             <!-- Authentication -->

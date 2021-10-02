@@ -90,7 +90,7 @@ class ClassroutineController extends Controller
             
         ]);
 
-        return redirect()->route('classroutine.index')->with('success','Classroutine Added Successfully!');
+        return redirect()->route('classroutine.index')->with('success','Class Routine Added Successfully!');
 
     }
 
@@ -161,7 +161,7 @@ class ClassroutineController extends Controller
             
         ]);
 
-        return redirect()->route('classroutine.index')->with('success','Classroutine Updated Successfully!');
+        return redirect()->route('classroutine.index')->with('success','Class Routine Updated Successfully!');
     }
 
     /**
@@ -173,6 +173,6 @@ class ClassroutineController extends Controller
     public function destroy(Classroutines $classroutine)
     {
         $classroutine->delete();
-        return redirect()->route('classroutine.index')->with('success','Classroutine Deleted Successfully!');
+        return redirect()->route('classroutine.index')->with('success','Class Routine Deleted Successfully!');
     }
 }
