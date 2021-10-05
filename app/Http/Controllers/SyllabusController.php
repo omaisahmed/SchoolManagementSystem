@@ -79,9 +79,9 @@ class SyllabusController extends Controller
      * @param  \App\Models\Syllabus  $syllabus
      * @return \Illuminate\Http\Response
      */
-    public function show(Syllabus $syllabus)
+    public function show(Syllabus $syllabu)
     {
-        return view('syllabus.show',compact('syllabus'));
+        return view('syllabus.show',compact('syllabu'));
     }
 
     /**
@@ -90,12 +90,12 @@ class SyllabusController extends Controller
      * @param  \App\Models\Syllabus  $syllabus
      * @return \Illuminate\Http\Response
      */
-    public function edit(Syllabus $syllabus)
+    public function edit(Syllabus $syllabu)
     {
        
         $SyllabusClass = Classes::all();
         $SyllabusSubject = Subjects::all();
-        return view('syllabus.edit', compact('syllabus'))->with('SyllabusCls',$SyllabusClass)->with('SyllabusSub',$SyllabusSubject);
+        return view('syllabus.edit', compact('syllabu'))->with('SyllabusCls',$SyllabusClass)->with('SyllabusSub',$SyllabusSubject);
     }
 
     /**
@@ -105,7 +105,7 @@ class SyllabusController extends Controller
      * @param  \App\Models\Syllabus  $syllabus
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Syllabus $syllabus)
+    public function update(Request $request, Syllabus $syllabu)
     {
 
         $request->validate([
@@ -122,7 +122,7 @@ class SyllabusController extends Controller
         $file->storeAs('attach_files/syllabus' , $filename);
         $path = $file->storeAs('' , $filename);
 
-        Syllabus::where('id', $syllabus->id)
+        Syllabus::where('id', $syllabu->id)
         ->update([
             'title'=> $request->input('title'),
             'class'=> $request->input('class'),
@@ -141,9 +141,9 @@ class SyllabusController extends Controller
      * @param  \App\Models\Syllabus  $syllabus
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Syllabus $syllabus)
+    public function destroy(Syllabus $syllabu)
     {
-        $syllabus->delete();
+        $syllabu->delete();
         return redirect()->route('syllabus.index')->with('success','Syllabus Deleted Successfully!');
     }
 }

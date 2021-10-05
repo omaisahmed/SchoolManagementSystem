@@ -57,7 +57,7 @@
 
 
                         <div class="form-group mb-0">
-                            <label class="mb-2 pb-1">Class</label>
+                            <label class="mb-2 mt-4">Class</label>
                             <div>
                             <select name="class" class="select2 form-control mb-3 custom-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
                                 

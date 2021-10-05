@@ -47,17 +47,17 @@
         </ul>
     </div>
 @endif
-                   <form action="{{ route('syllabus.update',$syllabus->id) }}" method="POST" enctype="multipart/form-data">
+                   <form action="{{ route('syllabus.update', $syllabu->id) }}" method="POST" enctype="multipart/form-data">
                    @csrf
                    {{ method_field("PUT") }}
                    <div class="form-group mb-0">
                             <label class="my-2 py-1">Title</label>
-                            <input type="text" name="title" value="{{ $syllabus->title }}" class="form-control" required placeholder="Title"/>
+                            <input type="text" name="title" value="{{ $syllabu->title }}" class="form-control" required placeholder="Title"/>
                         </div>
 
 
                         <div class="form-group mb-0">
-                            <label class="mb-2 pb-1">Class</label>
+                            <label class="mb-2 mt-4">Class</label>
                             <div>
                             <select name="class" class="select2 form-control mb-3 custom-select select2-hidden-accessible" tabindex="-1" aria-hidden="true">
                                 
