@@ -68,7 +68,7 @@
                                                                 <td>{{ $syllabus->class }}</td>
                                                                 <td>{{ $syllabus->section}}</td>
                                                                 <td>{{ $syllabus->subject}}</td>
-                                                                <td>{{ $syllabus->upload_syllabus }}</td>
+                                                                <td><a class="btn btn-primary mdi mdi-download" href="{{$syllabus->upload_syllabus}}" download>Download</a></td>
                                                                 
                                                                 <td><form action="{{ route('syllabus.destroy',$syllabus->id) }}" method="POST">
                                                                 <a class="btn btn-primary" href="{{ route('syllabus.edit',$syllabus->id) }}">Edit</a>
