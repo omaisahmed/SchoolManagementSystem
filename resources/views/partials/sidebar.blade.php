@@ -67,6 +67,10 @@
                                 <a href="/syllabus" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> Syllabus </span></a>
                             </li>
 
+                            <li>
+                                <a href="/attendence" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> Attendence </span></a>
+                            </li>
+
                             <!-- Authentication -->
                             <li class="py-3" style="margin-left: 35px;">
                             <form method="POST" action="{{ route('logout') }}">

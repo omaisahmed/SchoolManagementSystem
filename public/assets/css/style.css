@@ -3702,3 +3702,7 @@ File: Responsive
   overflow-x: auto;
     overflow-y: visible;
 }
+
+.iebtn {
+  color: white !important;
+}

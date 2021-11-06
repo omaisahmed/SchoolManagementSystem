@@ -16,8 +16,21 @@
 <link href="{{asset('assets/plugins/morris/morris.css')}}" rel="stylesheet">
 
 <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
-<link href="{{asset('assets/css/icons.css')}}" rel="stylesheet" type="text/css">
+<link href="{{asset('assets/css/icons.css')}}" rel="stylesheet" type="text/css"> 
 <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" type="text/css">
+
+<!-- Plugins css -->
+        <!-- <link href="{{asset('assets/plugins/timepicker/tempusdominus-bootstrap-4.css')}}" rel="stylesheet" />
+        <link href="{{asset('assets/plugins/timepicker/bootstrap-material-datetimepicker.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/plugins/clockpicker/jquery-clockpicker.min.css')}}" rel="stylesheet" />
+        <link href="{{asset('assets/plugins/colorpicker/asColorPicker.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('assets/plugins/select2/select2.min.css')}}" rel="stylesheet" type="text/css" />
+  
+        <link href="{{asset('assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css')}}" rel="stylesheet">
+        <link href="{{asset('assets/plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css')}}" rel="stylesheet" />   -->
+
+
 
 <!-- Fonts -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">

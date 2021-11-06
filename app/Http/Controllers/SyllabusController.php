@@ -49,7 +49,7 @@ class SyllabusController extends Controller
             'class'=> 'required',
             'section'=> 'required',
             'subject'=> 'required',
-            'upload_syllabus'=> 'required|mimes:pdf,xlx,csv|max:2048',
+            'upload_syllabus'=> 'required|mimes:pdf,xlx,csv,txt,rtf|max:2048',
 
         ]);
 
@@ -113,7 +113,7 @@ class SyllabusController extends Controller
             'class'=> 'required',
             'section'=> 'required',
             'subject'=> 'required',
-            'upload_syllabus'=> 'required|mimes:pdf,xlx,csv|max:2048',
+            'upload_syllabus'=> 'required|mimes:pdf,xlx,csv,txt,rtf|max:2048',
 
         ]);
 

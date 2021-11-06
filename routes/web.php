@@ -10,6 +10,8 @@ use App\Http\Controllers\DepartmentsController;
 use App\Http\Controllers\ClassroomsController;
 use App\Http\Controllers\ClassroutineController;
 use App\Http\Controllers\SyllabusController;
+use App\Http\Controllers\ExcelController;
+use App\Http\Controllers\AttendenceController;
 use Illuminate\Http\RedirectResponse;
 
 /*
@@ -27,10 +29,6 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-// Route::get('/login', function () {
-//     return redirect('/dashboard');
-// });
-
 Auth::routes();
 
 // Route::get('/students/index', [App\Http\Controllers\StudentsController::class, 'index'])->name('index');
@@ -43,11 +41,18 @@ Route::resource('students',StudentsController::class);
 Route::resource('classroom',ClassroomsController::class);
 Route::resource('classroutine',ClassroutineController::class);
 Route::resource('syllabus',SyllabusController::class);
-// Route::get('/subjects', [SubjectsController::class, 'create']);
+Route::resource('attendence',AttendenceController::class);
+// Route::get('attendence/search', [AttendenceController::class, 'search']);
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('export', 'App\Http\Controllers\ExcelController@export')->name('export');
+Route::get('importExportView', 'App\Http\Controllers\ExcelController@importExportView');
+Route::post('import', 'App\Http\Controllers\ExcelController@import')->name('import');
+
 
 // For Roles
 // Route::get('/users', function () {

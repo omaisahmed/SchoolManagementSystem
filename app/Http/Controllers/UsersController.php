@@ -6,6 +6,9 @@ use DB;
 use App\Models\Users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use App\Exports\UsersExport;
+use App\Imports\UsersImport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class UsersController extends Controller
 {
@@ -14,6 +17,14 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    // public function import() 
+    // {
+    //     Excel::import(new UsersImport,request()->file('file'));
+           
+    //     return redirect()->back();
+    // }
+
     public function index()
     {
         // return view('students.index');

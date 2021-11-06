@@ -33,6 +33,9 @@
         <script src="{{asset('assets/plugins/tiny-editable/numeric-input-example.js')}}"></script>
         <script src="{{asset('assets/plugins/tabledit/jquery.tabledit.js')}}"></script>
         <script src="{{asset('assets/pages/tabledit.init.js')}}"></script>
+        
+        <!-- MOdal Popup-->
+        <script src="{{asset('assets/pages/modal-animation.init.js')}}"></script>
 
 
         

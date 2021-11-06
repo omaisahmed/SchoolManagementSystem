@@ -25,12 +25,59 @@
                                         
                                         <div class="pull-left">
                                           <a class="btn btn-primary" href="{{ route('users.create') }}"><i class="fa fa-plus"> Add User</i></a>
-                                         </div>
+                                          <a class="btn btn-success iebtn" href="{{ route('export') }}"><i class="fa fa-download"></i> Export User Data</a> 
+                                          <a class="btn btn-success iebtn" data-toggle="modal" data-target="#importModal" style="color: white;"><i class="fa fa-upload"></i> Import User Data</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
                             <!-- end page title end breadcrumb -->
+
+            
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="importModal" tabindex="-1" role="dialog">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title">Import User Data</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                                <div class="row">
+                                                                <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
+                                                                @csrf 
+                                                                <div class="col-md-6">
+                                                               
+                                                                    <div class="form-group">
+                                                                        <label for="field-1" class="control-label">Upload File</label>
+                                                                        <input type="file" name="file" class="form-control" id="field-1" placeholder="Import File">
+                                                                    </div>
+                                                                </div>
+                                                                                        
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary">Upload</button>
+                                                        </div>
+                                                     </form>
+                                                    </div>
+                                                </div>
+
+                                            </div>                                  
+                                        </div>
+                                  </div>
+                              
+                                    
+
+
+
+
+
+
+                         
+
                             <div class="row">
                                 <div class="col-12">
                                     <div class="card">
