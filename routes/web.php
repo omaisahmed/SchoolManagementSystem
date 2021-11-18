@@ -42,8 +42,8 @@ Route::resource('classroom',ClassroomsController::class);
 Route::resource('classroutine',ClassroutineController::class);
 Route::resource('syllabus',SyllabusController::class);
 Route::resource('attendence',AttendenceController::class);
-// Route::get('attendence/search', [AttendenceController::class, 'search']);
-
+//Route::get('attendence/search', [AttendenceController::class, 'search']);
+Route::get('attendence/search', 'App\Http\Controllers\AttendenceController@search')->name('search');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

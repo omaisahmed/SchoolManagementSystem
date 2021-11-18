@@ -19,6 +19,8 @@ class AttendenceController extends Controller
     {
         $ClassAttendence = Classes::all();
         $attendences = Attendences::latest()->paginate(5);
+
+        //$attendences = DB::select('select class,section from students');
     
         return view('attendence.index', compact('attendences'))
             ->with('i', (request()->input('page', 1) - 1) * 5)->with('ClassAttd',$ClassAttendence);
@@ -70,9 +72,8 @@ class AttendenceController extends Controller
     public function show(Attendences $attendence)
     {
 
-        $attendences = DB::select('select class,section from students');
 
-        return view('attendence.show',['attendences' => $attendences], compact('attendence'));
+        return view('attendence.show', compact('attendence'));
     }
 
     /**
@@ -119,15 +120,16 @@ class AttendenceController extends Controller
      */
     public function destroy(Attendences $attendence)
     {
-        $student->delete();
+        $attendence->delete();
         return redirect()->route('attendence.index')->with('success','Attendence Deleted Successfully!');
     }
 
-    // public function search()
-    // {
-    //     $stds = DB::select('select * from attendence')->groupBy('class');
+    public function search(Attendences $attendence)
+    {
+        //$attendences = Students::select('class','section')->where('id', 1)->get();
+        $attendences = DB::select('select * from attendence')->groupBy('class');
 
-    //     return view('attendence.index', ['stds' => $stds]);
-    // }
+        return view('attendence.index', ['attendences' => $attendences], compact('attendences'));
+    }
 
 }

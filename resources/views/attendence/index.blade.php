@@ -47,7 +47,7 @@
         </ul>
     </div>
 @endif
-                <form action="{{ route('attendence.show') }}" method="POST">
+                <form action="{{ route('attendence.search') }}" method="POST" role="search">
                    @csrf
      
                                         <div class="form-group mb-0" style="display:flex;">
@@ -102,7 +102,7 @@
 
 
                             <!-- end page title end breadcrumb -->
-                            <!-- <div class="row">
+                            <div class="row">
                                 <div class="col-12">
                                     <div class="card">
                                         <div class="card-body">
@@ -123,11 +123,11 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                @foreach ($attendences as $attendence)
+                                                @foreach ($stds as $std)
                                                     <tr>
                                                         <td>{{ ++$i }}</td>
-                                                        <td>{{ $attendence->name }}</td>
-                                                        <td>{{ $attendence->status }}</td>  
+                                                        <td>{{ $std->name }}</td>
+                                                        <td>{{ $std->status }}</td>  
                                                         <td><form action="{{ route('attendence.destroy',$attendence->id) }}" method="POST">
                                                           <a class="btn btn-primary" href="{{ route('attendence.edit',$attendence->id) }}">Edit</a>
                                                 @csrf
@@ -148,7 +148,8 @@
                                         </div>
                                     </div>
                                 </div> 
-                            </div> end row -->
+                            </div>
+                            <!--End Row-->
             
                           
                         </div><!-- container -->
