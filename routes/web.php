@@ -46,9 +46,9 @@ Route::resource('attendence',AttendenceController::class);
 //Route::get('attendence/search', [AttendenceController::class, 'search']);
 Route::get('attendence/search', 'App\Http\Controllers\AttendenceController@search')->name('search');
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//     return view('dashboard');
-// })->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
 
 Route::get('export', 'App\Http\Controllers\ExcelController@export')->name('export');
 Route::get('importExportView', 'App\Http\Controllers\ExcelController@importExportView');
