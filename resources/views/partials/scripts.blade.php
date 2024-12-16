@@ -36,6 +36,12 @@
         
         <!-- MOdal Popup-->
         <script src="{{asset('assets/pages/modal-animation.init.js')}}"></script>
+        
+        <script>
+            $(document).ready(function(){
+                $('.dropdown-toggle').dropdown();  // Initialize dropdowns
+            });
+        </script>
 
 
         

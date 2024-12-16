@@ -12,6 +12,7 @@ use App\Http\Controllers\ClassroutineController;
 use App\Http\Controllers\SyllabusController;
 use App\Http\Controllers\ExcelController;
 use App\Http\Controllers\AttendenceController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Http\RedirectResponse;
 
 /*

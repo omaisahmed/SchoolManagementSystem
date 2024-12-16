@@ -69,7 +69,7 @@
                         <div class="form-group mb-0">
                             <label class="my-2 py-1">Password</label>
                             <div>
-                                <input type="password" class="form-control" name="password" value="{{ $user->password }}"  required
+                                <input type="password" class="form-control" name="password"  required
                                         parsley-type="password" placeholder="Enter a valid password"/>
                             </div>
                         </div>

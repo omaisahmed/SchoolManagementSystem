@@ -76,7 +76,7 @@ class CrawlerDetect
     /**
      * Class constructor.
      */
-    public function __construct(array $headers = null, $userAgent = null)
+    public function __construct(?array $headers = null, $userAgent = null)
     {
         $this->crawlers = new Crawlers();
         $this->exclusions = new Exclusions();
@@ -165,10 +165,12 @@ class CrawlerDetect
         $agent = trim(preg_replace(
             "/{$this->compiledExclusions}/i",
             '',
-            $userAgent ?: $this->userAgent
+            $userAgent ?: $this->userAgent ?: ''
         ));
 
         if ($agent === '') {
+            $this->matches = array();
+
             return false;
         }
 
@@ -183,5 +185,14 @@ class CrawlerDetect
     public function getMatches()
     {
         return isset($this->matches[0]) ? $this->matches[0] : null;
+    }
+
+
+    /**
+     * @return string|null
+     */
+    public function getUserAgent()
+    {
+        return $this->userAgent;
     }
 }

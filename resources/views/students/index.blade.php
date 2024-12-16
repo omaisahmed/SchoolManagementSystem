@@ -53,8 +53,6 @@
                                                     <th class="Bold">Image</th>
                                                     <th class="Bold">Name</th>
                                                     <th class="Bold">Email</th>
-                                                    <th class="Bold">Password</th>
-                                                    <th class="Bold">Confirm Password</th>
                                                     <th class="Bold">Class</th>
                                                     <th class="Bold">Section</th>
                                                     <th class="Bold">Phone</th>
@@ -73,8 +71,6 @@
                                                                 <th><img src="/images/students/{{ $student->image }}" width="70" class="img-responsive rounded-circle" /></th>
                                                                 <td>{{ $student->name }}</td>
                                                                 <td>{{ $student->email}}</td>
-                                                                <td>{{ $student->password}}</td>
-                                                                <td>{{ $student->confirm_password }}</td>
                                                                 <td>{{ $student->class }}</td>
                                                                 <td>{{ $student->section }}</td>
                                                                 <td>{{ $student->phone }}</td>

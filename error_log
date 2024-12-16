@@ -1,0 +1,1 @@
+[12-Jun-2024 20:52:24 UTC] PHP Fatal error:  Allowed memory size of 1610612736 bytes exhausted (tried to allocate 167772160 bytes) in phar:///usr/local/bin/composer1.phar/src/Composer/DependencyResolver/RuleSet.php on line 90

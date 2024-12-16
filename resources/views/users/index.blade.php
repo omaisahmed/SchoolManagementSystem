@@ -25,8 +25,8 @@
                                         
                                         <div class="pull-left">
                                           <a class="btn btn-primary" href="{{ route('users.create') }}"><i class="fa fa-plus"> Add User</i></a>
-                                          <a class="btn btn-success iebtn" href="{{ route('export') }}"><i class="fa fa-download"></i> Export User Data</a> 
-                                          <a class="btn btn-success iebtn" data-toggle="modal" data-target="#importModal" style="color: white;"><i class="fa fa-upload"></i> Import User Data</a>
+                                          <!--<a class="btn btn-success iebtn" href="{{ route('export') }}"><i class="fa fa-download"></i> Export User Data</a> -->
+                                          <!--<a class="btn btn-success iebtn" data-toggle="modal" data-target="#importModal" style="color: white;"><i class="fa fa-upload"></i> Import User Data</a>-->
                                         </div>
                                     </div>
                                 </div>
@@ -95,7 +95,6 @@
                                                     <th class="Bold">No</th>
                                                     <th class="Bold">Name</th>
                                                     <th class="Bold">Email</th>
-                                                    <th class="Bold">Password</th>
                                                     <th class="Bold">Role</th>
                                                     <th class="Bold">Actions</th>
                                                     </tr>
@@ -106,7 +105,6 @@
                                                         <td>{{ ++$i }}</td>
                                                         <td>{{ $user->name }}</td>
                                                         <td>{{ $user->email}}</td>
-                                                        <td>{{ bcrypt($user->password)}}</td>
                                                         <td>{{ $user->role }}</td>
                                                         <td><form action="{{ route('users.destroy',$user->id) }}" method="POST">
                                                           <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
